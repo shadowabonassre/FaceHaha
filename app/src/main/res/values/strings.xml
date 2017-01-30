@@ -10,4 +10,6 @@
     <string name="compose_shortcut_short_label1">camera</string>
     <string name="compose_shortcut_long_label1">camera</string>
     <string name="compose_disabled_message1">disbaled shortcut</string>
+    <string name="compose_shortcut_long_label2">guide</string>
+    <string name="compose_shortcut_long_label3">pick</string>
 </resources>

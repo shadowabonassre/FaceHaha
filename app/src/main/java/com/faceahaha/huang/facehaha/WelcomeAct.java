@@ -1,11 +1,18 @@
 package com.faceahaha.huang.facehaha;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ShortcutInfo;
+import android.content.pm.ShortcutManager;
+import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+
+import java.util.Arrays;
 
 public class WelcomeAct extends Activity {
 
@@ -68,4 +75,6 @@ public class WelcomeAct extends Activity {
         startActivity(i);
         finish();
     }
+
+
 }
