@@ -19,7 +19,7 @@ public class SelectAct extends Activity{
     private static final String TAG = MainActivity.class.getSimpleName();
     private WheelView myChoose;
 
-    private static final String[] NAMES = new String[]{"开始","玥玥脸","水神脸","梦妮脸", "一斌脸", "建川脸", "丑比脸", "罐头脸", "则神脸", "高航脸", "雨轩脸","剑飞脸","悦悦脸","馆长脸"};
+    private static final String[] NAMES = new String[]{"开始","馆长脸"};
     private FloatingActionButton fab_check;
     private String mySelectname;
 

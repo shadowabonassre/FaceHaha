@@ -314,54 +314,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guanzhang_face)).getBitmap();
                         }
 
-                        if (Item.equals("雨轩脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.wanyuxuan_face)).getBitmap();
-                        }
-
-                        if (Item.equals("丑比脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.changle_face)).getBitmap();
-                        }
-
-                        if (Item.equals("罐头脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guantou_face)).getBitmap();
-                        }
-
-                        if (Item.equals("则神脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zesheng_face)).getBitmap();
-                        }
-
-                        if (Item.equals("一斌脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yibing_face)).getBitmap();
-                        }
-
-                        if (Item.equals("梦妮脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.menni_face)).getBitmap();
-                        }
-
-                        if (Item.equals("玥玥脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yueyue_face)).getBitmap();
-                        }
-
-                        if (Item.equals("建川脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jianchuan_face)).getBitmap();
-                        }
-
-                        if (Item.equals("高航脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.gaohang_face)).getBitmap();
-                        }
-
-                        if (Item.equals("水神脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.shuishen_face)).getBitmap();
-                        }
-
-                        if (Item.equals("悦悦脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zhanyue_face)).getBitmap();
-                        }
-
-                        if (Item.equals("剑飞脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jianfei_face)).getBitmap();
-                        }
-
                     }
 
                 }
@@ -560,55 +512,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (Item.equals("馆长脸")) {
                             mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guanzhang_face)).getBitmap();
                         }
-
-                        if (Item.equals("雨轩脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.wanyuxuan_face)).getBitmap();
-                        }
-
-                        if (Item.equals("丑比脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.changle_face)).getBitmap();
-                        }
-
-                        if (Item.equals("罐头脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guantou_face)).getBitmap();
-                        }
-
-                        if (Item.equals("则神脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zesheng_face)).getBitmap();
-                        }
-
-                        if (Item.equals("一斌脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yibing_face)).getBitmap();
-                        }
-
-                        if (Item.equals("梦妮脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.menni_face)).getBitmap();
-                        }
-
-                        if (Item.equals("玥玥脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yueyue_face)).getBitmap();
-                        }
-
-                        if (Item.equals("建川脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jianchuan_face)).getBitmap();
-                        }
-
-                        if (Item.equals("高航脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.gaohang_face)).getBitmap();
-                        }
-
-                        if (Item.equals("水神脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.shuishen_face)).getBitmap();
-                        }
-
-                        if (Item.equals("悦悦脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zhanyue_face)).getBitmap();
-                        }
-
-                        if (Item.equals("剑飞脸")) {
-                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jianfei_face)).getBitmap();
-                        }
-
                     }
                     mFacebitmap = Bitmap.createScaledBitmap(mFacebitmap, (int) (mFacebitmap.getWidth() * radio), (int) (mFacebitmap.getHeight() * radio), false);
                 }
