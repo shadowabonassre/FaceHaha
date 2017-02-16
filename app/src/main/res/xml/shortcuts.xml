@@ -1,20 +1,6 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:enabled="true"
-        android:icon="@drawable/ic_camera_alt_black_24dp"
-        android:shortcutDisabledMessage="@string/compose_disabled_message1"
-        android:shortcutId="camera"
-        android:shortcutLongLabel="@string/compose_shortcut_long_label1"
-        android:shortcutShortLabel="@string/compose_shortcut_short_label1">
-        <intent
-            android:action="android.intent.action.ACTION_CAMERA_BUTTON"
-            android:targetPackage="com.faceahaha.huang.facehaha" />
-
-        <categories android:name="android.shortcut.conversation" />
-    </shortcut>
-
-    <shortcut
-        android:enabled="true"
         android:icon="@drawable/ic_style_black_24dp"
         android:shortcutDisabledMessage="@string/compose_disabled_message1"
         android:shortcutId="guide"
@@ -23,20 +9,6 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.faceahaha.huang.facehaha.Guide"
-            android:targetPackage="com.faceahaha.huang.facehaha" />
-
-        <categories android:name="android.shortcut.conversation" />
-    </shortcut>
-
-    <shortcut
-        android:enabled="true"
-        android:icon="@drawable/ic_insert_photo_black_24dp"
-        android:shortcutDisabledMessage="@string/compose_disabled_message1"
-        android:shortcutId="pick"
-        android:shortcutLongLabel="@string/compose_shortcut_long_label3"
-        android:shortcutShortLabel="@string/compose_shortcut_long_label3">
-        <intent
-            android:action="android.intent.action.ACTION_PICK"
             android:targetPackage="com.faceahaha.huang.facehaha" />
 
         <categories android:name="android.shortcut.conversation" />

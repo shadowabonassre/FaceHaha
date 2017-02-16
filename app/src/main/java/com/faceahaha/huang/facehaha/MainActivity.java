@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Bitmap mFacebitmap;
     private Rect mSrcRect, mDestRect;
     private int mScreenWidth, mScreenHeight;
+    private boolean isHavingcamera = false;
 
     private Intent intent2;
 
@@ -184,8 +185,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     try {
 
                         if (isDrawed) {
-                            mphoto.setImageBitmap(mPhotoImg_changed);
-                            isDrawed = false;
+                            mphoto.setImageBitmap(mPhotoImg);
+//                            isDrawed = false;
                         } else {
                             mphoto.setImageBitmap(mPhotoImg_changed);
                             isDrawed = true;
@@ -244,6 +245,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.id_fab_camera:
+//                mWaitting.setVisibility(View.GONE);
                 requestContactPermission();
 //              Uri photoUri = Uri.fromFile(new File(mFilePath));
                 Uri photoUri = FileProvider.getUriForFile(MainActivity.this, MainActivity.this.getApplicationContext().getPackageName() + ".provider", new File(mFilePath));
@@ -257,6 +259,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.id_fab_detect:
 
                 mWaitting.setVisibility(View.VISIBLE);
+                Log.d("========>", isHavingcamera + "");
+                if (isHavingcamera) {
+                    mWaitting.setVisibility(View.GONE);
+                }
+
                 remoteShortCuts();
 
                 if (count == 0) {
@@ -313,6 +320,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (Item.equals("馆长脸")) {
                             mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guanzhang_face)).getBitmap();
                         }
+                        if (Item.equals("姚明脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yaom_face)).getBitmap();
+                        }
+                        if (Item.equals("希拉里脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xilali_face)).getBitmap();
+                        }
+                        if (Item.equals("川普脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.chuanpu_face)).getBitmap();
+                        }
+                        if (Item.equals("小李子脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xiali_face)).getBitmap();
+                        }
+                        if (Item.equals("小贝脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xiaobei_face)).getBitmap();
+                        }
+                        if (Item.equals("乔布斯脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jobs_face)).getBitmap();
+                        }
+                        if (Item.equals("憨豆脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.hand_face)).getBitmap();
+                        }
+                        if (Item.equals("屌威脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.weierx_face)).getBitmap();
+                        }
+                        if (Item.equals("狒狒脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.feifei_face)).getBitmap();
+                        }
+                        if (Item.equals("长者脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zhanzhe_face)).getBitmap();
+                        }
+                        if (Item.equals("钢铁侠脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.gtx_face)).getBitmap();
+                        }
+                        if (Item.equals("浩克脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.haok_face)).getBitmap();
+                        }
+                        if (Item.equals("柴犬脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.doge1_face)).getBitmap();
+                        }
+                        if (Item.equals("二哈脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.doge2_face)).getBitmap();
+                        }
 
                     }
 
@@ -342,17 +391,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case SNAP_CODE:
-
-                count++;
-
                 FileInputStream fis = null;
                 try {
 
                     fis = new FileInputStream(mFilePath);
                     mPhotoImg = BitmapFactory.decodeStream(fis);
 
+                    if (mPhotoImg == null) {
+                        isHavingcamera = false;
+                    } else {
+                        isHavingcamera = true;
+                    }
+
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
+                    count = 0;
                 } finally {
 
                     try {
@@ -512,6 +565,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (Item.equals("馆长脸")) {
                             mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.guanzhang_face)).getBitmap();
                         }
+                        if (Item.equals("姚明脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.yaom_face)).getBitmap();
+                        }
+                        if (Item.equals("希拉里脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xilali_face)).getBitmap();
+                        }
+                        if (Item.equals("川普脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.chuanpu_face)).getBitmap();
+                        }
+                        if (Item.equals("小李子脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xiali_face)).getBitmap();
+                        }
+                        if (Item.equals("小贝脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.xiaobei_face)).getBitmap();
+                        }
+                        if (Item.equals("乔布斯脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.jobs_face)).getBitmap();
+                        }
+                        if (Item.equals("憨豆脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.hand_face)).getBitmap();
+                        }
+                        if (Item.equals("屌威脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.weierx_face)).getBitmap();
+                        }
+                        if (Item.equals("狒狒脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.feifei_face)).getBitmap();
+                        }
+                        if (Item.equals("长者脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.zhanzhe_face)).getBitmap();
+                        }
+                        if (Item.equals("钢铁侠脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.gtx_face)).getBitmap();
+                        }
+                        if (Item.equals("浩克脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.haok_face)).getBitmap();
+                        }
+                        if (Item.equals("柴犬脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.doge1_face)).getBitmap();
+                        }
+                        if (Item.equals("二哈脸")) {
+                            mFacebitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.doge2_face)).getBitmap();
+                        }
                     }
                     mFacebitmap = Bitmap.createScaledBitmap(mFacebitmap, (int) (mFacebitmap.getWidth() * radio), (int) (mFacebitmap.getHeight() * radio), false);
                 }
@@ -532,7 +627,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mFacebitmap = adjustPhotoRoation(mFacebitmap, mChangedRoationNum);
                 //----------贴图方位计算公式----------
                 canvas.drawBitmap(mFacebitmap,
-                        x - w / 2 - 0.562f * mTwoEyesX - (2 * mChangedRoationNumAbs), y - h / 2 - (1.73f * mTwoEyesX) /*+ mChangedRoationNum*/, null);
+                        x - w / 2 - 0.562f * mTwoEyesX - (mChangedRoationNumAbs), y - h / 2 - (1.5f * mTwoEyesX) + 0.3f * mChangedRoationNum, null);
                 mPhotoImg_changed = bitmap;
                 isDrawed = false;
             }
@@ -549,7 +644,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float scaleHeight = (mHeight) / height;
 
         Matrix matrix = new Matrix();
-        matrix.postScale(scaleWidth + 0.065f, scaleHeight + 0.065f);
+        matrix.postScale(scaleWidth + 0.050f, scaleHeight + 0.050f);
         Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0, width,
                 height, matrix, true);
         return resizedBitmap;
