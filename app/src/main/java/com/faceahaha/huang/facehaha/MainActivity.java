@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent2 = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 intent2.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
                 startActivityForResult(intent2, SNAP_CODE);
-                creatingShourtCuts();
+//                creatingShourtCuts();
 
                 break;
 
@@ -264,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mWaitting.setVisibility(View.GONE);
                 }
 
-                remoteShortCuts();
+//                remoteShortCuts();
 
                 if (count == 0) {
                     mWaitting.setVisibility(View.INVISIBLE);
